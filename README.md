@@ -39,21 +39,25 @@ CLI tool accept 4 options (short alias and full name):
 **Options description:**
 
 ```bash
-$ node caesar-cli --help
+$ node app --help
 ```
 
 **Usage example:**
 
 ```
-$ node caesar-cli -a encode -s 7 -i "./input.txt" -o "./output.txt"
+node app -a encode -s 7 -i "./input.txt" -o "./output.txt"
+node app -a encode -s 7 -i ./input.txt -o ./output.txt
+node app -a encode -s 7 -i input.txt --output output.txt
 ```
 
 ```bash
-$ node caesar-cli --action encode --shift 7 --input input.txt --output output.txt
+node app --action encode --shift 7 --input dir/plain.txt --output dir/encode.txt
+node app --action encode --shift 7 --input ./dir/plain.txt --output ./dir/encode.txt
+node app --action encode --shift 7 --input "./dir/plain.txt" --output "./dir/encode.txt"
 ```
 
 ```bash
-$ node task1 --action decode --shift 7 --input input.txt --output output.txt
+$ node app --action decode --shift 7 --input input.txt --output output.txt
 ```
 
 **Decode text**
