@@ -6,14 +6,14 @@
   "author": "zzvipz",
   "license": "isc",
   "scripts": {
-    "lint": "eslint js/*.js",
-    "fix": "eslint js/*.js --fix",
-    "prettier": "prettier --config .prettierrc --write js/*.js"
+    "lint": "eslint caesar-cli/*.js",
+    "fix": "eslint caesar-cli/*.js --fix",
+    "prettier": "prettier --config .prettierrc --write caesar-cli/*.js"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run prettier && git add .",
-      "pre-push": "eslint js/*.js"
+      "pre-push": "eslint caesar-cli/*.js"
     }
   },
   "dependencies": {
