@@ -2,13 +2,13 @@ const { Transform } = require('stream');
 const caesarCipher = require('./utils/caesar-cipher');
 
 class TransformStream extends Transform {
-  constructor(shift, action) {
+  constructor(action, shift) {
     super();
-    this.shift = shift;
     this.action = action;
+    this.shift = shift;
   }
   _transform(chunk, encoding, callback) {
-    this.push(caesarCipher(chunk, this.shift, this.action));
+    this.push(caesarCipher(String(chunk), this.action, this.shift));
     callback();
   }
 }

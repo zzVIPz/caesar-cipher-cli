@@ -1,5 +1,4 @@
-const caesarCipher = (chunk, shift, action) => {
-  if (!(shift % 26)) return chunk;
+const caesarCipher = (chunk, action, shift) => {
   actionShift = action === 'encode' ? shift : 26 - shift;
   return chunk.replace(/[a-z]/gi, (char) => {
     const currentCharCode = char.charCodeAt();
